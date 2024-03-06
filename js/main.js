@@ -7,6 +7,8 @@ const initApp = () => {
     //clear out previous suggestions
     clearSuggestions();
     //generate names
+    const namesArray = generateNames()
+    console.log(namesArray)
     //display names
   });
 };
@@ -37,5 +39,6 @@ const generateNames = () => {
   const suggestion2 = namesOne[randomNumArr[1]] + namesTwo[randomNumArr[0]]
   const suggestion3 = namesOne[randomNumArr[2]] + namesTwo[randomNumArr[2]]
   const suggestion4 = namesOne[randomNumArr[3]] + namesTwo[randomNumArr[1]]
-  
+
+  return [suggestion1, suggestion2, suggestion3, suggestion4]
 };
