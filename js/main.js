@@ -1,4 +1,4 @@
-import { namesOne, namesTwo } from "./names";
+import { namesOne, namesTwo } from "./names.js";
 
 const initApp = () => {
   document.getElementById("submitForm").addEventListener("submit", (e) => {
@@ -35,6 +35,7 @@ const generateNames = () => {
     randomNumArr.push(randomNum);
     i++;
   }
+  console.log(randomNumArr)
   const suggestion1 = namesOne[randomNumArr[0]] + namesTwo[randomNumArr[3]]
   const suggestion2 = namesOne[randomNumArr[1]] + namesTwo[randomNumArr[0]]
   const suggestion3 = namesOne[randomNumArr[2]] + namesTwo[randomNumArr[2]]
