@@ -52,7 +52,11 @@ const displayNames = (namesArray) => {
     <a href="https://youtube.com/${name}" target="_blank">${name}</a></li>`;
     list.innerHTML += `<ul>
     <li><a href="<a href="https://youtube.com/${firstName}s${name}" target="_blank">${firstName}s${name}</a></li>
-    <li><a href="<a href="https://youtube.com/${name}With${firstName}" target="_blank">${firstName}s${name}</a></li>
+    <li><a href="<a href="https://youtube.com/${name}With${firstName}" target="_blank">${name}With${firstName}</a></li>
     `
   });
+  const display = document.getElementById("suggestionSection");
+  if (display.classList.contains("hidden")) {
+    display.classList.toggle("hidden");
+  }
 };
